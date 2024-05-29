@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+      - "8081:8081"
+      - "8082:8082"
+    volumes:
+      - .:/app
+    environment:
+      - DJANGO_SETTINGS_MODULE=api.settings
+      - DJANGO_SETTINGS_MODULE=apiForUpdate.settings
+      - DJANGO_SETTINGS_MODULE=apiForDelete.settings
